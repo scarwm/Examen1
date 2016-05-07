@@ -5,6 +5,7 @@
  */
 package Utilidades;
 
+import static java.lang.Math.random;
 import java.util.ArrayList;
 
 /**
@@ -24,6 +25,12 @@ public class Plantilla<T> {
          System.out.println(t.getClass());
      }
 
+    public T getArreglo(){
+        int random = (int )(Math. random() * arreglo.size() + 1);
+        
+        T obj=arreglo.get(random);
+        return obj ;
+    }
    
 
 

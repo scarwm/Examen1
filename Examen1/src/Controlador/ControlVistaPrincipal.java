@@ -7,6 +7,7 @@ package Controlador;
 
 import Utilidades.Plantilla;
 import Vista.AgregarDatos;
+import Vista.Simulador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,12 +17,15 @@ import java.awt.event.ActionListener;
  */
 public class ControlVistaPrincipal implements ActionListener{
     
+    private Plantilla plantilla; 
     private AgregarDatos ad;
+    private Simulador simulador;
     private ControlAgregarDatos controlAgregarDatos;
-   
+    
 
     public ControlVistaPrincipal() {
        this.controlAgregarDatos=new ControlAgregarDatos();
+       plantilla= new Plantilla();
     }
     
     
@@ -33,7 +37,8 @@ public class ControlVistaPrincipal implements ActionListener{
             controlAgregarDatos.setAgregarDatos(ad);
             ad.show();
         }if(ae.getActionCommand().equalsIgnoreCase("Simular")){
-            
+            simulador=new Simulador();
+            simulador.show();
         }
         
     }
